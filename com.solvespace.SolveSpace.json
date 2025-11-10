@@ -261,7 +261,8 @@
                 {
                     "type": "shell",
                     "commands": [
-                        "sed -e 's/^\\(include(GetGitCommitHash)\\)/#\\1/' -e 's/^# \\(set(GIT_COMMIT_HASH\\).*/\\1 flatpak)/' -i CMakeLists.txt"
+                        "sed -e 's/^\\(include(GetGitCommitHash)\\)/#\\1/' -e 's/^# \\(set(GIT_COMMIT_HASH\\).*/\\1 flatpak)/' -i CMakeLists.txt",
+                        "sed -e 's#GIT_HASH_URL.*#GIT_HASH_URL \"https://github.com/solvespace/solvespace/tree/v3.1\"#' -i src/config.h.in"
                     ]
                 }
             ],
