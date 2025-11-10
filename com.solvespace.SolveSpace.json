@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/TingPing/flatpak-manifest-schema/master/flatpak-manifest.schema",
     "app-id": "com.solvespace.SolveSpace",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "finish-args": [
         "--device=dri",
@@ -217,7 +217,8 @@
             "builddir": true,
             "config-opts": [
                 "-DBUILD_STATIC_LIBS=OFF",
-                "-DENABLE_THREADING=ON"
+                "-DENABLE_THREADING=ON",
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
             ],
             "sources": [
                 {
@@ -239,7 +240,8 @@
             "builddir": true,
             "config-opts": [
                 "-DFLATPAK=ON",
-                "-DENABLE_TESTS=OFF"
+                "-DENABLE_TESTS=OFF",
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
             ],
             "sources": [
                 {
