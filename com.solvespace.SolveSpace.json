@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/TingPing/flatpak-manifest-schema/master/flatpak-manifest.schema",
     "app-id": "com.solvespace.SolveSpace",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "finish-args": [
         "--device=dri",
@@ -256,12 +256,13 @@
                 },
                 {
                     "type": "patch",
-                    "path": "metainfo-update-add-screenshots.patch"
+                    "path": "metainfo-updates.patch"
                 },
                 {
                     "type": "shell",
                     "commands": [
-                        "sed -e 's/^\\(include(GetGitCommitHash)\\)/#\\1/' -e 's/^# \\(set(GIT_COMMIT_HASH\\).*/\\1 flatpak)/' -i CMakeLists.txt"
+                        "sed -e 's/^\\(include(GetGitCommitHash)\\)/#\\1/' -e 's/^# \\(set(GIT_COMMIT_HASH\\).*/\\1 flatpak)/' -i CMakeLists.txt",
+                        "sed -e 's#GIT_HASH_URL.*#GIT_HASH_URL \"https://github.com/solvespace/solvespace/tree/v3.1\"#' -i src/config.h.in"
                     ]
                 }
             ],
