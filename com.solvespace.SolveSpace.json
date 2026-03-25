@@ -52,8 +52,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.8.tar.xz",
-                    "sha256": "235a40bec7346c7b82b6a8caae0456353dc06e71f14bc414bcc858af1838719a",
+                    "url": "https://download.gnome.org/sources/libsigc++/2.99/libsigc++-2.99.13.tar.xz",
+                    "sha256": "6ce40b3d719b6792f145d94511131dd48edaa9c0cd4ec02b0e959d5d1c406621",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libsigc++",
@@ -104,8 +104,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/cairomm/1.12/cairomm-1.12.0.tar.xz",
-                    "sha256": "a54ada8394a86182525c0762e6f50db6b9212a2109280d13ec6a0b29bfd1afe6",
+                    "url": "https://download.gnome.org/sources/cairomm/1.15/cairomm-1.15.4.tar.xz",
+                    "sha256": "4cd9fd959538953dfa606aaa7a31381e3193eebf14d814d97ef928684ee9feb5",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "cairomm",
@@ -154,8 +154,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.4.tar.xz",
-                    "sha256": "0a142a8128f83c001efb8014ee463e9a766054ef84686af953135e04d28fdab3",
+                    "url": "https://download.gnome.org/sources/atkmm/2.29/atkmm-2.29.1.tar.xz",
+                    "sha256": "4140baa3c7991e8e0c518b17939c1a655e3e578bcdaf2fc0f2767e07853af545",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "atkmm",
@@ -181,8 +181,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.10.tar.xz",
-                    "sha256": "7ab7e2266808716e26c39924ace1fb46da86c17ef39d989624c42314b32b5a76",
+                    "url": "https://download.gnome.org/sources/gtkmm/3.97/gtkmm-3.97.1.tar.xz",
+                    "sha256": "8faf90e61a423423afd7d4d70517666d6a09c17de490506e866c210c6a4a1283",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gtkmm",
@@ -257,8 +257,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/solvespace/solvespace/releases/download/v3.1/solvespace-3.1.tar.xz",
-                    "sha256": "34a273ce642d0c77b8f101463730ed4eade7d90cfabfe486f3e7cbf494ff132a",
+                    "url": "https://github.com/solvespace/solvespace/releases/download/v3.2/solvespace-3.2.tar.xz",
+                    "sha256": "21deb98621bb1870fe68252a94bc098d5fa2c474a811970ba4fe209d193f94e1",
                     "x-checker-data": {
                         "is-main-source": true,
                         "type": "json",
