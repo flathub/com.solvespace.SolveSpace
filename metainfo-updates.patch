@@ -1,82 +1,28 @@
 diff --git a/res/freedesktop/com.solvespace.SolveSpace.metainfo.xml.in b/res/freedesktop/com.solvespace.SolveSpace.metainfo.xml.in
-index 3e88165b..9e49ecc8 100644
+index 9e49ecc8..5a16122f 100644
 --- a/res/freedesktop/com.solvespace.SolveSpace.metainfo.xml.in
 +++ b/res/freedesktop/com.solvespace.SolveSpace.metainfo.xml.in
-@@ -7,7 +7,8 @@
- 
-   <metadata_license>CC0-1.0</metadata_license>
-   <project_license>GPL-3.0-or-later</project_license>
--  <update_contact>ryan_AT_ryanpavlik.com</update_contact>
-+  <update_contact>rylie_AT_ryliepavlik.com</update_contact>
-+  <developer_name>The SolveSpace Community, originally by Jonathan Westhues and other authors</developer_name>
- 
-   <categories>
-     <category>Graphics</category>
-@@ -16,10 +17,10 @@
-   </categories>
-   <description>
-     <p>
--      SolveSpace is a free (GPLv3) parametric 3d CAD tool. Applications include:
-+      SolveSpace is a free (GPLv3) parametric 2d/3d CAD (computer-aided design) tool. Applications include:
-     </p>
-     <ul>
--      <li>Modeling 3d parts — draw with extrudes, revolves, and Boolean operations</li>
-+      <li>Modeling 3d parts — draw with extrudes, revolves/helix, and Boolean operations</li>
-       <li>Modeling 2d parts — draw the part as a single section, and export; use 3d assembly to verify fit</li>
-       <li>Modeling 3d-printed parts — export the STL or other triangle mesh expected by most slicers</li>
-       <li>Preparing 2D CAM data — export 2d vector art for a waterjet machine or laser cutter</li>
-@@ -31,6 +32,34 @@
-   <url type="bugtracker">https://github.com/solvespace/solvespace/issues</url>
- 
-   <launchable type="desktop-id">@DESKTOP_FILE_NAME@</launchable>
-+
-+  <screenshots>
-+    <screenshot type="default">
-+      <caption>Main window with an empty document</caption>
-+      <image>https://solvespace.com/pics/window-linux-main.png</image>
-+    </screenshot>
-+    <screenshot>
-+      <caption>Property Browser with an empty document</caption>
-+      <image>https://solvespace.com/pics/window-linux-property-browser.png</image>
-+    </screenshot>
-+    <screenshot>
-+      <caption>Viewing and editing constraints on a model</caption>
-+      <image>https://solvespace.com/pics/front-page-pic.png</image>
-+    </screenshot>
-+    <screenshot>
-+      <caption>3D view of a stand made from notched angle iron, from the "ex-stand" project</caption>
-+      <image>https://solvespace.com/pics/ex-stand-detail.jpg</image>
-+    </screenshot>
-+    <screenshot>
-+      <caption>Dimensioning a 2D sketch for a case for a printed circuit board, from the "ex-case" project</caption>
-+      <image>https://solvespace.com/pics/ex-case-outline.png</image>
-+    </screenshot>
-+    <screenshot>
-+      <caption>Showing tracing of Chebyshev's linkage, from the "ex-chebyshev" project</caption>
-+      <image>https://solvespace.com/pics/ex-chebyshev.png</image>
-+    </screenshot>
-+  </screenshots>
-+
-   <provides>
-     <mediatype>application/x-solvespace</mediatype>
-   </provides>
-@@ -38,6 +67,19 @@
+@@ -67,6 +67,14 @@
    <content_rating type="oars-1.0" />
  
    <releases>
-+    <release version="3.1" date="2022-06-01" type="stable">
++    <release version="3.2" date="2026-03-27" type="stable">
 +      <description>
-+        <p>Major new stable release. Includes new arc and line length ratio and difference
-+        constraints, comments associated with point entities. Adds "exploded view" to sketches,
-+        and support for displaying measurements in "feet-inches". Adds a pitch parameter to
-+        helix extrusions. Allows use of Point and Normal to define a new workplane to sketch in.
-+        Adds live updating of Property Browser while dragging the sketch, and active links for
-+        all points, normals, and vectors in the Property Browser. Adds the ability to link STL
-+        files into a model. Includes a variety of UI improvements. Speeds up complex sketches
-+        by up to 8x and doubles the maximum unknowns.</p>
++        <p>Major new stable release. Includes parallel and perpendicular constraints for faces,
++        expands many existing constraints to operate on more than two entities at once. Basic
++        kerning in text elements. STEP files export as solid models. A variety of UI improvements.</p>
 +      </description>
-+      <url>https://github.com/solvespace/solvespace/releases/tag/v3.0</url>
++      <url>https://github.com/solvespace/solvespace/releases/tag/v3.2</url>
 +    </release>
+     <release version="3.1" date="2022-06-01" type="stable">
+       <description>
+         <p>Major new stable release. Includes new arc and line length ratio and difference
+@@ -78,7 +86,7 @@
+         files into a model. Includes a variety of UI improvements. Speeds up complex sketches
+         by up to 8x and doubles the maximum unknowns.</p>
+       </description>
+-      <url>https://github.com/solvespace/solvespace/releases/tag/v3.0</url>
++      <url>https://github.com/solvespace/solvespace/releases/tag/v3.1</url>
+     </release>
      <release version="3.0" date="2021-04-18" type="stable">
        <description>
-         <p>Major new stable release. Includes new intersection boolean operation,

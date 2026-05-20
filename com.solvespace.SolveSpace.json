@@ -257,8 +257,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/solvespace/solvespace/releases/download/v3.1/solvespace-3.1.tar.xz",
-                    "sha256": "34a273ce642d0c77b8f101463730ed4eade7d90cfabfe486f3e7cbf494ff132a",
+                    "url": "https://github.com/solvespace/solvespace/releases/download/v3.2/solvespace-3.2.tar.xz",
+                    "sha256": "d93e816667b6c6f05fabc3f3cb6d783fad2a3805c46d24e28f2ebd91bc36de76",
                     "x-checker-data": {
                         "is-main-source": true,
                         "type": "json",
@@ -275,7 +275,7 @@
                     "type": "shell",
                     "commands": [
                         "sed -e 's/^\\(include(GetGitCommitHash)\\)/#\\1/' -e 's/^# \\(set(GIT_COMMIT_HASH\\).*/\\1 flatpak)/' -i CMakeLists.txt",
-                        "sed -e 's#GIT_HASH_URL.*#GIT_HASH_URL \"https://github.com/solvespace/solvespace/tree/v3.1\"#' -i src/config.h.in"
+                        "sed -e 's#GIT_HASH_URL.*#GIT_HASH_URL \"https://github.com/solvespace/solvespace/tree/v3.2\"#' -i src/config.h.in"
                     ]
                 }
             ],
