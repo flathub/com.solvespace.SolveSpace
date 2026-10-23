@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/TingPing/flatpak-manifest-schema/master/flatpak-manifest.schema",
     "app-id": "com.solvespace.SolveSpace",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
+    "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
     "finish-args": [
         "--device=dri",
@@ -16,192 +16,19 @@
         "/lib/pkgconfig",
         "/share/aclocal",
         "/share/pkgconfig",
-        "*.la"
+        "*.la",
+        "*.a"
     ],
     "command": "solvespace",
     "modules": [
-        {
-            "name": "mm-common",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.7.tar.xz",
-                    "sha256": "494abfce781418259b1e9d8888c73af4de4b6f3be36cc75d9baa8baa0f2a7a39",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "mm-common",
-                        "stable-only": true
-                    }
-                }
-            ],
-            "cleanup": [
-                "/bin",
-                "/share/doc",
-                "/share/man",
-                "/share/mm-common"
-            ]
-        },
-        {
-            "name": "sigc++",
-            "buildsystem": "meson",
-            "config-opts": [
-                "--buildtype=release",
-                "-Dbuild-examples=false"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.8.tar.xz",
-                    "sha256": "235a40bec7346c7b82b6a8caae0456353dc06e71f14bc414bcc858af1838719a",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "libsigc++",
-                        "stable-only": true,
-                        "versions": {
-                            "<": "3.0.0"
-                        }
-                    }
-                }
-            ],
-            "cleanup": [
-                "/lib/sigc++-*"
-            ]
-        },
-        {
-            "name": "glibmm",
-            "buildsystem": "meson",
-            "config-opts": [
-                "--buildtype=release",
-                "-Dbuild-examples=false"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.8.tar.xz",
-                    "sha256": "64f11d3b95a24e2a8d4166ecff518730f79ecc27222ef41faf7c7e0340fc9329",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "glibmm",
-                        "stable-only": true,
-                        "versions": {
-                            "<": "2.68.0"
-                        }
-                    }
-                }
-            ],
-            "cleanup": [
-                "/lib/giomm-*",
-                "/lib/glibmm-*",
-                "/lib/libglibmm_generate_extra_defs-*.so*"
-            ]
-        },
-        {
-            "name": "cairomm",
-            "config-opts": [
-                "--disable-documentation"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/cairomm/1.12/cairomm-1.12.0.tar.xz",
-                    "sha256": "a54ada8394a86182525c0762e6f50db6b9212a2109280d13ec6a0b29bfd1afe6",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "cairomm",
-                        "stable-only": true,
-                        "versions": {
-                            "<": "1.16.0"
-                        }
-                    }
-                }
-            ],
-            "cleanup": [
-                "/lib/cairomm-*"
-            ]
-        },
-        {
-            "name": "pangomm",
-            "buildsystem": "meson",
-            "config-opts": [
-                "--buildtype=release"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/pangomm/2.46/pangomm-2.46.4.tar.xz",
-                    "sha256": "b92016661526424de4b9377f1512f59781f41fb16c9c0267d6133ba1cd68db22",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "pangomm",
-                        "stable-only": true,
-                        "versions": {
-                            "<": "2.48.0"
-                        }
-                    }
-                }
-            ],
-            "cleanup": [
-                "/lib/pangomm-*"
-            ]
-        },
-        {
-            "name": "atkmm",
-            "buildsystem": "meson",
-            "config-opts": [
-                "--buildtype=release"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.4.tar.xz",
-                    "sha256": "0a142a8128f83c001efb8014ee463e9a766054ef84686af953135e04d28fdab3",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "atkmm",
-                        "stable-only": true,
-                        "versions": {
-                            "<": "2.30.0"
-                        }
-                    }
-                }
-            ],
-            "cleanup": [
-                "/lib/atkmm-*"
-            ]
-        },
-        {
-            "name": "gtkmm",
-            "buildsystem": "meson",
-            "config-opts": [
-                "--buildtype=release",
-                "-Dbuild-demos=false",
-                "-Dbuild-tests=false"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.10.tar.xz",
-                    "sha256": "7ab7e2266808716e26c39924ace1fb46da86c17ef39d989624c42314b32b5a76",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "gtkmm",
-                        "stable-only": true,
-                        "versions": {
-                            "<": "4.0.0"
-                        }
-                    }
-                }
-            ],
-            "cleanup": [
-                "/lib/gdkmm-*",
-                "/lib/gtkmm-*"
-            ]
-        },
+        "gtkmm-3.json",
         {
             "name": "eigen",
             "buildsystem": "cmake-ninja",
             "builddir": true,
+            "cleanup": [
+                "*"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -215,9 +42,6 @@
                         "url-template": "https://gitlab.com/libeigen/eigen/-/archive/$version/eigen-$version.tar.gz"
                     }
                 }
-            ],
-            "cleanup": [
-                "*"
             ]
         },
         {
@@ -254,11 +78,14 @@
                 "-DENABLE_TESTS=OFF",
                 "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
             ],
+            "cleanup": [
+                "/lib/libslvs*.so*"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/solvespace/solvespace/releases/download/v3.2/solvespace-3.2.tar.xz",
-                    "sha256": "d93e816667b6c6f05fabc3f3cb6d783fad2a3805c46d24e28f2ebd91bc36de76",
+                    "url": "https://github.com/solvespace/solvespace/releases/download/v3.3/solvespace-3.3.tar.xz",
+                    "sha256": "a62837f8346701b248016adf41457a7b93778e2fe1a289d738fd188d77c99eea",
                     "x-checker-data": {
                         "is-main-source": true,
                         "type": "json",
@@ -278,9 +105,6 @@
                         "sed -e 's#GIT_HASH_URL.*#GIT_HASH_URL \"https://github.com/solvespace/solvespace/tree/v3.2\"#' -i src/config.h.in"
                     ]
                 }
-            ],
-            "cleanup": [
-                "/lib/libslvs*.so*"
             ]
         }
     ]
