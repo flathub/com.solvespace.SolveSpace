@@ -209,9 +209,13 @@
                     "sha256": "8586084f71f9bde545ee7fa6d00288b264a2b7ac3607b974e54d13e7162c1c72",
                     "x-checker-data": {
                         "type": "html",
-                        "url": "https://eigen.tuxfamily.org/index.php?title=Main_Page",
-                        "version-pattern": "latest stable release</b> is Eigen ([\\d\\.-]+[\\d])",
+                        "url": "https://libeigen.gitlab.io/news/",
+                        "version-pattern": "/news/eigen_([0-9]+\\.[0-9]+\\.[0-9]+)_released/",
                         "stable-only": true,
+                        "versions": {
+                            ">=": "3.4.0",
+                            "<": "3.5.0"
+                        },
                         "url-template": "https://gitlab.com/libeigen/eigen/-/archive/$version/eigen-$version.tar.gz"
                     }
                 }
